@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import LenisScroll from "@/components/Lenis";
 
 const funnelSans = localFont({
   src: "./fonts/FunnelSans-VF.ttf",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${funnelSans.className} antialiased`}
       >
+        <LenisScroll/>
         {children}
       </body>
     </html>
