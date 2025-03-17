@@ -83,7 +83,7 @@ const Card = ({ product }: { product: Product }) => {
       <div className="col-span-full md:col-span-4 rounded-md items-stretch overflow-hidden">
         <Image
           src={product.image}
-          className="object-cover object-center w-full h-auto max-h-[65vh] aspect-[5/6]"
+          className="object-cover object-center w-full h-auto aspect-[5/6]"
           alt={product.title}
           width={600}
           height={800}
