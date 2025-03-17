@@ -33,35 +33,34 @@ const Card = ({ product }: { product: Product }) => {
       delay: 0.2,
       width: "100%",
       ease: "power2.out",
-      duration: 0.8,
+      duration: 0.6,
     })
     .to(".title-span", {
       y: 0,
-      duration: 0.6,
+      duration: 0.4,
       stagger: 0.01
     }, "<+0.1")
     .to(description.current, {
       y: 0,
-      duration: 0.6,
+      duration: 0.4,
       opacity: 1,
     }, "<+=0.4")
     .to(price.current, {
       x: 0,
-      duration: 0.6,
+      duration: 0.4,
       opacity: 1
     }, "1-=0.2")
     .to(colorsGroup.current, {
       y: 0,
       opacity: 1,
-      duration: 0.6
-    }, "<+=0.4")
+      duration: 0.4
+    }, "<+=0.2")
   }, { scope: card })
 
   useGSAP(() => {
     gsap.to(card.current, {
       y: 0,
-      opacity: 1,
-      duration: 1,
+      duration: 0.8,
       ease: "power2.out",
       scrollTrigger: {
         trigger: card.current,
@@ -79,7 +78,7 @@ const Card = ({ product }: { product: Product }) => {
   })
 
   return (
-    <div ref={card} className="card relative opacity-0 bg-slate-50 grid grid-cols-12 gap-y-3 py-5 translate-y-40">
+    <div ref={card} className="card relative bg-slate-50 grid grid-cols-12 gap-y-3 py-5 translate-y-40">
       <span ref={border} className="absolute inset-0 w-0 h-0.5 bg-slate-900/90"></span>
       <div className="col-span-full md:col-span-4 rounded-md items-stretch overflow-hidden">
         <Image
@@ -112,7 +111,7 @@ const Card = ({ product }: { product: Product }) => {
         </div>
 
         <div className="flex md:flex-col justify-between max-md:items-end gap-1.5 md:gap-3 mt-4 mb-1 grow">
-          <div ref={colorsGroup} className="space-y-1.5 text-lg opacity-0 translate-y-1/3">
+          <div ref={colorsGroup} className="space-y-1.5 text-lg opacity-0 translate-y-1/4">
             <div>Colors</div>
             <div className="flex gap-1.5">
               {product.colors.map((color, i) => (

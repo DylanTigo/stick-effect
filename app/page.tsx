@@ -64,8 +64,8 @@ export default function Home() {
     }).to("p.flex span", {
       y: 0,
       duration: 0.6,
-      stagger: 0.01
-    }, "<+0.1");
+      stagger: 0.02
+    }, "<+0.2");
 
     gsap.to(lastSection.current, {
       scrollTrigger: {
@@ -83,7 +83,7 @@ export default function Home() {
 
   return (
     <main ref={main} className="p-3 text-slate-900 relative bg-slate-50">
-      <section className="h-[30vh] w-full overflow-hidden "></section>
+      <section className="h-[60vh] w-full overflow-hidden "></section>
       <section>
         <div className="py-5 md:py-7 bg-slate-50 relative">
           <span
