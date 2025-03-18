@@ -64,7 +64,7 @@ const Card = ({ product }: { product: Product }) => {
       ease: "power2.out",
       scrollTrigger: {
         trigger: card.current,
-        start: "top bottom",
+        start: "10% bottom",
         end: "bottom bottom",
         toggleActions: "play none none reverse",
         onEnter: () => {
@@ -83,7 +83,7 @@ const Card = ({ product }: { product: Product }) => {
       <div className="col-span-full md:col-span-4 rounded-md items-stretch overflow-hidden">
         <Image
           src={product.image}
-          className="object-cover object-center w-full h-auto aspect-[5/6]"
+          className="object-cover object-center w-full h-auto max-h-[70vh] aspect-[5/6]"
           alt={product.title}
           width={600}
           height={800}

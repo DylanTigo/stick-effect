@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${funnelSans.className} antialiased`}
+        className={`${funnelSans.className} antialiased max-w-full overflow-x-hidden`}
       >
         <LenisScroll/>
         {children}

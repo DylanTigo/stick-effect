@@ -59,7 +59,7 @@ export default function Home() {
     tl.to(".border-item", {
       width: "100%",
       ease: "power2.out",
-      stagger: 0.1,
+      stagger: 0.5,
       duration: 0.8,
     }).to("p.flex span", {
       y: 0,
@@ -70,7 +70,7 @@ export default function Home() {
     gsap.to(lastSection.current, {
       scrollTrigger: {
         trigger: lastSection.current,
-        start: "30% 60%",
+        start: "20% 70%",
         onEnter: () => {
           tl.play();
         },
@@ -93,7 +93,7 @@ export default function Home() {
           <div className="w-fit h-fit overflow-hidden">
             <h1
               ref={title}
-              className="text-[calc(42px+2vw)] md:text-[calc(48px+4vw)] leading-tight mb-1"
+              className="flex text-[calc(42px+2vw)] md:text-[calc(48px+4vw)] leading-tight mb-1"
             >
               {splitText("New Collection.", "translate-y-full")}
             </h1>
